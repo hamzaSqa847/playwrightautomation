@@ -6,7 +6,7 @@ test('Test Case Registration ', async ({ page }) => {
   await page.getByRole('link', { name: ' Signup / Login' }).click();
   await expect(page.getByRole('heading', {name: 'New User Signup!'})).toBeVisible();
    await page.getByRole('textbox', { name: 'Name' }).fill('Muhammad Hamza');
-  await page.locator('form').filter({ hasText: 'Signup' }).getByPlaceholder('Email Address').fill('hamzaicp54@gmail.com');
+  await page.locator('form').filter({ hasText: 'Signup' }).getByPlaceholder('Email Address').fill('hamzaicp55@gmail.com');
   await page.getByRole('button', { name: 'Signup' }).click();
   await expect (page.getByRole('heading', {name: 'Enter Account Information'})).toBeVisible();
   await page.getByRole('radio', { name: 'Mr.' }).check();
@@ -29,9 +29,9 @@ test('Test Case Registration ', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Mobile Number *' }).fill('868686868686');
   await page.getByRole('button', { name: 'Create Account' }).click();
   await expect (page.getByText('Account Created!')).toBeVisible();
-  
+  await page.getByRole('link', { name: 'Continue' }).click();
+  await page.getByRole('link', { name: ' Delete Account' }).click();
+  await expect (page.getByText('Account Deleted!')).toBeVisible();
 });
-
-
 
 

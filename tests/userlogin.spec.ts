@@ -13,7 +13,9 @@ test('loging with correct email ', async ({ page }) => {
 
   
   // Verify that home page  is visible successfully
-  await expect(page.getByRole('link',{name:'Home'})).toBeVisible()
+  await expect(page.getByRole('link',{name:'Home'})).toBeVisible();
   //Verify that  heading is visible successfully
-  await expect (page.getByRole('heading', {name:'Login to your account'})).toBeVisible()
+await expect(page.locator('a', { hasText: 'Logged in as Muhammad Hamza' })).toBeVisible();
+
+
 });
