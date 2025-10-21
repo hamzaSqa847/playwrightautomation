@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { join } from 'path';
 
 test('loging with correct email ', async ({ page }) => {
 
@@ -16,6 +17,5 @@ test('loging with correct email ', async ({ page }) => {
   await expect(page.getByRole('link',{name:'Home'})).toBeVisible();
   //Verify that  heading is visible successfully
 await expect(page.locator('a', { hasText: 'Logged in as Muhammad Hamza' })).toBeVisible();
-
 
 });
