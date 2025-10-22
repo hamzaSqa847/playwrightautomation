@@ -3,7 +3,7 @@ import { HomePage } from '../pages/HomePage';
 
 test('Test Case Registration ', async ({ page }) => {
  const home = new HomePage(page);
- home.goto()
+ await home.goto()
   await expect (page.getByRole('heading',{name:'Full-Fledged practice website for Automation Engineers'})).toBeVisible()
   await page.getByRole('link', { name: ' Signup / Login' }).click();
   await expect(page.getByRole('heading', {name: 'New User Signup!'})).toBeVisible();
