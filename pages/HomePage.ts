@@ -15,11 +15,13 @@ export class HomePage {
     await expect(this.page.getByRole('link', { name: 'Home' })).toBeVisible();
   }
 
-  async goToContactPage() {
-    await this.page.getByRole('link', { name: 'Contact us' }).click();
-  }
+//   async goToContactPage() {
+//     await this.page.getByRole('link', { name: 'Contact us' }).click();
+//   }
 
   async goToLoginPage() {
     await this.page.getByRole('link', { name: 'Signup / Login' }).click();
   }
+
+  
 }
