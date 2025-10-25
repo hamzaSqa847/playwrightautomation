@@ -21,3 +21,4 @@ test('Login with incorrect email', async ({ page }) => {
   await login.login('hamzaicp67@gmail.com', '123');
   await login.verifyInvalidLoginMessage();
 });
+
